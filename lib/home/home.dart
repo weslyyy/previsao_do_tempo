@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:previsao_do_tempo/home/widgets/main_screen.dart';
 import 'package:previsao_do_tempo/providers/weatcher_server.dart';
 
 class Home extends StatefulWidget {
@@ -23,8 +24,8 @@ class _HomeState extends State<Home> {
               ),
             );
           default:
-            return Center(
-              child: Text("Acabou"),
+            return MainScreen(
+              data: snapshot.data["results"],
             );
         }
       },
